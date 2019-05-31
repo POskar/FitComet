@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:menu="@menu/bottom_navigation"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--<android.support.design.widget.TabLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabs"/>-->
+    </RelativeLayout>
+
+   <RelativeLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+    <!--
+           <ProgressBar
+               android:progress="62"
+               android:outlineSpotShadowColor="@color/greey"
+               android:outlineAmbientShadowColor="@color/test2"
+               android:id="@+id/progressBar5"
+               style="?android:attr/progressBarStyleHorizontal"
+               android:layout_width="222dp"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="124dp"
+               android:layout_marginBottom="81dp" />
+
+           <ProgressBar
+               android:progress="74"
+               android:id="@+id/progressBar3"
+               style="?android:attr/progressBarStyleHorizontal"
+               android:layout_width="222dp"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="118dp"
+               android:layout_marginBottom="149dp"
+               android:outlineSpotShadowColor="@color/greey"
+               android:outlineAmbientShadowColor="@color/colorPrimary"/>
+
+           <ProgressBar
+               android:progress="92"
+               android:outlineSpotShadowColor="@color/greey"
+               android:outlineAmbientShadowColor="@color/test2"
+               android:id="@+id/progressBar4"
+               style="?android:attr/progressBarStyleHorizontal"
+               android:layout_width="222dp"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="118dp"
+               android:layout_marginBottom="105dp" />
+
+           <ProgressBar
+
+               android:progress="42"
+               android:outlineSpotShadowColor="@color/greey"
+               android:outlineAmbientShadowColor="@color/test2"
+               android:id="@+id/progressBar2"
+               style="?android:attr/progressBarStyleHorizontal"
+               android:layout_width="222dp"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="123dp"
+               android:layout_marginBottom="126dp" />
+
+           <TextView
+               android:id="@+id/textView2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="51dp"
+               android:layout_marginBottom="150dp"
+               android:text="Kalorie" />
+
+           <TextView
+               android:id="@+id/textView3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="51dp"
+               android:layout_marginBottom="126dp"
+               android:text="Białko" />
+
+           <TextView
+               android:id="@+id/textView4"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="53dp"
+               android:layout_marginBottom="102dp"
+               android:text="Tłuszcz" />
+
+           <TextView
+               android:id="@+id/textView5"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="30dp"
+               android:layout_marginBottom="79dp"
+               android:text="Weglowodany" />-->
+       </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="46dp"
+        android:text="Przelicznik"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/et_bg_white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Konwertuj Na : "
+        android:textSize="30dp" />
+
+    <RadioGroup
+        android:id="@+id/RGwaga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textConvert"
+        android:layout_marginLeft="223dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/et_bg_white">
+
+        <RadioButton
+            android:id="@+id/lbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="WagaButtonLicz"
+            android:paddingRight="30dp"
+            android:text="LBS" />
+
+        <RadioButton
+            android:id="@+id/kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="WagaButtonLicz"
+            android:paddingRight="30dp"
+            android:text="KG" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/Waga"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textConvert"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/et_bg_black"
+        android:hint="Wpisz Cieżar Tutaj"
+        android:inputType="number"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp" />
+
+    <Button
+        android:id="@+id/WagaBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Waga"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="298dp"
+        android:background="@drawable/et_bg_black"
+        android:onClick="onClickPrzelicz"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Przelicz"
+        android:textSize="20dp" />
+
+    <TextView
+        android:paddingVertical="5dp"
+        android:textAlignment="center"
+        android:id="@+id/wyliczWysw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/WagaBut"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/et_bg_black"
+        android:hint="Tutaj zostanie Wyswietlona Wartosc"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="46dp"
+        android:text="Przelicznik"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+</RelativeLayout>

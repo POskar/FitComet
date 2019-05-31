@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gradient_end">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="00:00:00"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/et_bg"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+
+        android:textSize="70sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_view"
+        android:layout_centerInParent="true"
+        android:paddingTop="50dp">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_view"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/et_bg_white"
+            android:fontFamily="sans-serif-light"
+            android:onClick="StopwatchClickStart"
+            android:text="@string/start_button" />
+
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_view"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/start_button"
+            android:background="@drawable/et_bg_white"
+            android:fontFamily="sans-serif-light"
+            android:onClick="StopwatchesClickStop"
+            android:text="@string/stop_button" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_view"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/stop_button"
+            android:background="@drawable/et_bg_white"
+            android:fontFamily="sans-serif-light"
+            android:onClick="StopwatchClickReset"
+            android:text="@string/reset_button" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="46dp"
+        android:text="Stoper"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+</RelativeLayout>

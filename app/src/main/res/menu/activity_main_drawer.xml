@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/ic_profil"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_pomiar"
+            android:icon="@drawable/miarka_"
+            android:title="@string/measure" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_message"
+            android:title="@string/support" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_setting"
+            android:title="@string/settings" />
+
+
+        <item android:title="@string/groupgym">
+            <menu>
+                <item
+                    android:id="@+id/nav_test"
+                    android:icon="@drawable/ic_setting"
+                    android:title="test" />
+                <item
+                    android:id="@+id/nav_gymplan"
+                    android:icon="@drawable/ic_gymplan"
+                    android:title="@string/gymplan" />
+                <item
+                    android:id="@+id/nav_maxweight"
+                    android:icon="@drawable/ic_gym"
+                    android:title="@string/maxweight" />
+                <item
+                    android:id="@+id/nav_stopwatch"
+                    android:icon="@drawable/ic_stoper"
+                    android:title="@string/stopwatch" />
+                <item
+                    android:id="@+id/nav_calculator"
+                    android:icon="@drawable/ic_setting"
+                    android:title="@string/calculator" />
+            </menu>
+        </item>
+        <item android:title="@string/groupdiet">
+            <menu>
+                <item
+                    android:id="@+id/nav_diet"
+                    android:icon="@drawable/ic_diet"
+                    android:title="@string/diet" />
+                <item
+                    android:id="@+id/nav_dietpor"
+                    android:icon="@drawable/ic_creative"
+                    android:title="@string/dietpor" />
+                <item
+                    android:id="@+id/nav_dietbook"
+                    android:icon="@drawable/ic_bulbbook"
+                    android:title="@string/dietbook" />
+                <item
+
+                    android:title="" />
+            </menu>
+        </item>
+    </group>
+</menu>
