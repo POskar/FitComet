@@ -119,4 +119,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logofitcom3" />
 
+
 </android.support.constraint.ConstraintLayout>
