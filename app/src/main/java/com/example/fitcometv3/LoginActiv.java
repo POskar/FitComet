@@ -102,6 +102,7 @@ public class LoginActiv extends AppCompatActivity implements TextWatcher,
                             if (task.isSuccessful()) {
 
                                 mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
+                                mDatabaseRef.child("Password").setValue(userPasswordString);
 
                                 mDatabaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
                                     @Override

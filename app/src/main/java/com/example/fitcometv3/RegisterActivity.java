@@ -76,10 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
                             {
                                 mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
 
-                                String key_user = mDatabaseRef.getKey();
-
                                 mDatabaseRef.child("isVerified").setValue("unverified");
-                                mDatabaseRef.child("userKey").setValue(key_user);
                                 mDatabaseRef.child("Username").setValue(userUsernameString);
                                 mDatabaseRef.child("Email").setValue(userEmailString);
                                 mDatabaseRef.child("Password").setValue(userPasswordString);

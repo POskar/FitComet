@@ -18,16 +18,15 @@ import com.xw.repo.BubbleSeekBar;
 
 public class Welcome_Activity extends AppCompatActivity {
 
-    Button buttonMoveToMain;
+    Button buttonMoveToMain, buttonHelp;
     ImageView btnMezczyzna, btnKobieta, btnaktyw1, btnaktyw2, btnaktyw3, btnaktyw4;
     BubbleSeekBar suwakWiek, suwakWaga, suwakWzrost;
 
     String userPlec;
-    int userWaga = 0, userWzrost = 0, userWiek = 0, userPoziomAktywnosci = 0;
+    int userWaga = 0, userWzrost = 0, userWiek = 0;
+    double userPoziomAktywnosci = 0;
 
     FirebaseAuth mAuth;
-    FirebaseAuth.AuthStateListener mAuthListener;
-
     DatabaseReference mDatabaseRef, mDetailsRef;
 
     @Override
@@ -47,6 +46,7 @@ public class Welcome_Activity extends AppCompatActivity {
         suwakWiek = findViewById(R.id.wieksuwak);
         suwakWzrost = findViewById(R.id.wzrostsuwak);
         buttonMoveToMain = findViewById(R.id.buttonMoveToMain);
+        buttonHelp = findViewById(R.id.buttonHelp);
 
         suwakWaga.setOnProgressChangedListener(new BubbleSeekBar.OnProgressChangedListener() {
             @Override
@@ -118,7 +118,7 @@ public class Welcome_Activity extends AppCompatActivity {
         btnaktyw1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userPoziomAktywnosci = 1;
+                userPoziomAktywnosci = 1.0;
                 btnaktyw1.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci1wcisniety));
                 btnaktyw2.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci2));
                 btnaktyw3.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci3));
@@ -129,7 +129,7 @@ public class Welcome_Activity extends AppCompatActivity {
         btnaktyw2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userPoziomAktywnosci = 2;
+                userPoziomAktywnosci = 1.2;
                 btnaktyw1.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci1));
                 btnaktyw2.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci2wcisniety));
                 btnaktyw3.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci3));
@@ -140,7 +140,7 @@ public class Welcome_Activity extends AppCompatActivity {
         btnaktyw3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userPoziomAktywnosci = 3;
+                userPoziomAktywnosci = 1.4;
                 btnaktyw1.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci1));
                 btnaktyw2.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci2));
                 btnaktyw3.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci3wcisniety));
@@ -151,7 +151,7 @@ public class Welcome_Activity extends AppCompatActivity {
         btnaktyw4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userPoziomAktywnosci = 4;
+                userPoziomAktywnosci = 1.6;
                 btnaktyw1.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci1));
                 btnaktyw2.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci2));
                 btnaktyw3.setImageDrawable(getResources().getDrawable(R.drawable.przyciskaktywnosci3));
@@ -184,5 +184,18 @@ public class Welcome_Activity extends AppCompatActivity {
                 }
             }
         });
+
+        buttonHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialog();
+            }
+        });
+    }
+
+    public void openDialog()
+    {
+        HelpDialog helpDialog = new HelpDialog();
+        helpDialog.show(getSupportFragmentManager(), "help dialog");
     }
 }

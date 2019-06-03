@@ -93,6 +93,14 @@
             android:layout_row="3"
             android:layout_column="1"
             android:progress="92" />
+
+        <TextView
+            android:id="@+id/textKalorie"
+            android:layout_width="205dp"
+            android:layout_height="66dp"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:textSize="24sp" />
     </GridLayout>
 
     <include

@@ -17,8 +17,12 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.DecimalFormat;
 
@@ -26,10 +30,12 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public boolean kgTrue = true;
-    TextView LoginAsTv;
-    //
+    FirebaseAuth mAuth;
+    DatabaseReference mDatabaseRef;
 
-    //
+    TextView tvKalorie;
+    int userWiek, userWaga, userWzrost;
+    double userKalorie, userPoziomAktywnosci;
 
 
 
@@ -50,10 +56,41 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        tvKalorie = findViewById(R.id.textKalorie);
 
-        LoginAsTv=findViewById(R.id.LoginAs);
-        //LoginAsTv.setText("Tu oskar");
+        mAuth = FirebaseAuth.getInstance();
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid()).child("Dane");
 
+        mDatabaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.child("Plec").getValue().toString().equals("mezczyzna"))
+                {
+                    userWaga = dataSnapshot.child("Waga").getValue(Integer.class);
+                    userWzrost = dataSnapshot.child("Wzrost").getValue(Integer.class);
+                    userWiek = dataSnapshot.child("Wiek").getValue(Integer.class);
+                    userPoziomAktywnosci = dataSnapshot.child("PoziomAktywnosci").getValue(Double.class);
+
+                    userKalorie = (66.5 + (13.7 * userWaga) + (5 * userWzrost) - (6.8 * userWiek)) * userPoziomAktywnosci;
+                    tvKalorie.setText(String.format("%.2f", userKalorie));
+                }
+                else
+                {
+                    userWaga = dataSnapshot.child("Waga").getValue(Integer.class);
+                    userWzrost = dataSnapshot.child("Wzrost").getValue(Integer.class);
+                    userWiek = dataSnapshot.child("Wiek").getValue(Integer.class);
+                    userPoziomAktywnosci = dataSnapshot.child("PoziomAktywnosci").getValue(Double.class);
+
+                    userKalorie = (655 + (9.6 * userWaga) + (1.85 * userWzrost) - (4.7 * userWiek)) * userPoziomAktywnosci;
+                    tvKalorie.setText(String.format("%.2f", userKalorie));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
     }
 
