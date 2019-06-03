@@ -18,13 +18,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:clickable="true"
-        android:onClick="ZmianaKoloruMezczyzna"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintHorizontal_bias="0.336"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038"
+        app:layout_constraintVertical_bias="0.015"
         app:srcCompat="@drawable/mezczyznanieprzycisniety" />
 
     <ImageView
@@ -36,13 +35,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:clickable="true"
-        android:onClick="ZmianaKoloruKobieta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintHorizontal_bias="0.694"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038"
+        app:layout_constraintVertical_bias="0.015"
         app:srcCompat="@drawable/kobietanieprzycisnieta" />
 
     <ImageButton
@@ -58,7 +56,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705"
+        app:layout_constraintVertical_bias="0.648"
         app:srcCompat="@drawable/wagagrafika" />
 
     <com.xw.repo.BubbleSeekBar
@@ -69,8 +67,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:bsb_max="120"
-        app:bsb_min="50"
+        app:bsb_max="200"
+        app:bsb_min="40"
         app:bsb_progress="0"
         app:bsb_second_track_color="@color/pomarancz"
         app:bsb_section_count="70"
@@ -84,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.748" />
+        app:layout_constraintVertical_bias="0.68" />
 
     <ImageButton
         android:id="@+id/wzrostwyglad"
@@ -99,7 +97,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533"
+        app:layout_constraintVertical_bias="0.489"
         app:srcCompat="@drawable/wzrostgrafika" />
 
     <com.xw.repo.BubbleSeekBar
@@ -110,7 +108,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:bsb_max="190"
+        app:bsb_max="220"
         app:bsb_min="140"
         app:bsb_progress="0"
         app:bsb_second_track_color="@color/pomarancz"
@@ -125,7 +123,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588" />
+        app:layout_constraintVertical_bias="0.536" />
 
     <ImageButton
         android:id="@+id/wiekwyglad"
@@ -140,7 +138,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.354"
+        app:layout_constraintVertical_bias="0.323"
         app:srcCompat="@drawable/wiekgrafika" />
 
     <com.xw.repo.BubbleSeekBar
@@ -166,7 +164,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432" />
+        app:layout_constraintVertical_bias="0.405" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -177,12 +175,26 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.851"
+        app:layout_constraintVertical_bias="0.775"
         app:srcCompat="@drawable/poziomaktywnoscigrafika" />
 
+
+    <Button
+        android:id="@+id/buttonMoveToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:layout_weight="1"
+        android:text="Potwierdź"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -194,10 +206,10 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934">
+        app:layout_constraintVertical_bias="0.865">
 
         <ImageView
             android:id="@+id/pozaktyw1"
@@ -208,7 +220,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:clickable="true"
-            android:onClick="ZmianaKoloruPoziomAktywn1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.06"
@@ -226,7 +237,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:clickable="true"
-            android:onClick="ZmianaKoloruPoziomAktywn2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.328"
@@ -244,7 +254,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:clickable="true"
-            android:onClick="ZmianaKoloruPoziomAktywn3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.586"
@@ -263,7 +272,6 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/przyciskaktywnosci4"
             android:clickable="true"
-            android:onClick="ZmianaKoloruPoziomAktywn4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.842"

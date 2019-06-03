@@ -72,7 +72,7 @@ public class LoginActiv extends AppCompatActivity implements TextWatcher,
 
         sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
-        rem_userpass = (CheckBox) findViewById(R.id.checkBoxRemember);
+        rem_userpass = findViewById(R.id.checkBoxRemember);
         if (sharedPreferences.getBoolean(KEY_REMEMBER, false))
             rem_userpass.setChecked(true);
         else
@@ -88,20 +88,6 @@ public class LoginActiv extends AppCompatActivity implements TextWatcher,
         //
 
         mAuth = FirebaseAuth.getInstance();
-
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-
-                if (user != null) {
-
-                } else {
-
-                }
-            }
-        };
 
         btnLogowanie.setOnClickListener(new View.OnClickListener() {
             @Override
