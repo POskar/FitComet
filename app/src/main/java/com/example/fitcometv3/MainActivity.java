@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity
                     userPoziomAktywnosci = dataSnapshot.child("PoziomAktywnosci").getValue(Double.class);
 
                     userKalorie = (66.5 + (13.7 * userWaga) + (5 * userWzrost) - (6.8 * userWiek)) * userPoziomAktywnosci;
-                    tvKalorie.setText(String.format("%.2f", userKalorie));
+                    tvKalorie.setText(String.format("%.0f", userKalorie));
+                    mDatabaseRef.child("TargetKalorie").setValue(userKalorie);
                 }
                 else
                 {
@@ -82,7 +83,8 @@ public class MainActivity extends AppCompatActivity
                     userPoziomAktywnosci = dataSnapshot.child("PoziomAktywnosci").getValue(Double.class);
 
                     userKalorie = (655 + (9.6 * userWaga) + (1.85 * userWzrost) - (4.7 * userWiek)) * userPoziomAktywnosci;
-                    tvKalorie.setText(String.format("%.2f", userKalorie));
+                    tvKalorie.setText(String.format("%.0f", userKalorie));
+                    mDatabaseRef.child("TargetKalorie").setValue(userKalorie    );
                 }
             }
 

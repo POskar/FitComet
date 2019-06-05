@@ -51,7 +51,6 @@ public class LoginActiv extends AppCompatActivity implements TextWatcher,
     String userEmailString, userPasswordString;
 
     FirebaseAuth mAuth;
-    FirebaseAuth.AuthStateListener mAuthListener;
 
     DatabaseReference mDatabaseRef;
 
@@ -109,13 +108,11 @@ public class LoginActiv extends AppCompatActivity implements TextWatcher,
                                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                         if(!dataSnapshot.child("isVerified").getValue().toString().equals("verified")){
                                             Intent intent = new Intent(LoginActiv.this, Welcome_Activity.class);
-                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                             startActivity(intent);
                                         }
                                         else
                                         {
                                             Intent intent = new Intent(LoginActiv.this, MainActivity.class);
-                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                             startActivity(intent);
                                         }
                                     }

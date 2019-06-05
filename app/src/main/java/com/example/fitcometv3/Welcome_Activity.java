@@ -175,7 +175,6 @@ public class Welcome_Activity extends AppCompatActivity {
                     mDetailsRef.child("PoziomAktywnosci").setValue(userPoziomAktywnosci);
 
                     Intent intent = new Intent(Welcome_Activity.this, MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
                  else
