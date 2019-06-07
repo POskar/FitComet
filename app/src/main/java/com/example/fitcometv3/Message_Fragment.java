@@ -38,9 +38,8 @@ public class Message_Fragment extends Fragment implements View.OnClickListener {
             case R.id.messageID:
                 //DOKONCZYC WYSYLANIE
                 String messageText = messageTV.getText().toString();
-                Toast.makeText(getContext(), "Wyslano Zgloszenie", Toast.LENGTH_LONG).show();
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-                emailIntent.setData(Uri.parse("mailto:abc@xyz.com"));
+                emailIntent.setData(Uri.parse("mailto:teamfitcomet@gmail.com"));
                 startActivity(Intent.createChooser(emailIntent, "Send feedback"));
                 break;
         }

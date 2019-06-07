@@ -31,13 +31,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public boolean kgTrue = true;
     FirebaseAuth mAuth;
-    DatabaseReference mDatabaseRef;
-
-    TextView tvKalorie;
-    int userWiek, userWaga, userWzrost;
-    double userKalorie, userPoziomAktywnosci;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,44 +49,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        tvKalorie = findViewById(R.id.textKalorie);
-
         mAuth = FirebaseAuth.getInstance();
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid()).child("Dane");
-
-        mDatabaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.child("Plec").getValue().toString().equals("mezczyzna"))
-                {
-                    userWaga = dataSnapshot.child("Waga").getValue(Integer.class);
-                    userWzrost = dataSnapshot.child("Wzrost").getValue(Integer.class);
-                    userWiek = dataSnapshot.child("Wiek").getValue(Integer.class);
-                    userPoziomAktywnosci = dataSnapshot.child("PoziomAktywnosci").getValue(Double.class);
-
-                    userKalorie = (66.5 + (13.7 * userWaga) + (5 * userWzrost) - (6.8 * userWiek)) * userPoziomAktywnosci;
-                    tvKalorie.setText(String.format("%.0f", userKalorie));
-                    mDatabaseRef.child("TargetKalorie").setValue(userKalorie);
-                }
-                else
-                {
-                    userWaga = dataSnapshot.child("Waga").getValue(Integer.class);
-                    userWzrost = dataSnapshot.child("Wzrost").getValue(Integer.class);
-                    userWiek = dataSnapshot.child("Wiek").getValue(Integer.class);
-                    userPoziomAktywnosci = dataSnapshot.child("PoziomAktywnosci").getValue(Double.class);
-
-                    userKalorie = (655 + (9.6 * userWaga) + (1.85 * userWzrost) - (4.7 * userWiek)) * userPoziomAktywnosci;
-                    tvKalorie.setText(String.format("%.0f", userKalorie));
-                    mDatabaseRef.child("TargetKalorie").setValue(userKalorie    );
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
     }
 
 
@@ -219,11 +175,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public void OnBackClick(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
     public void onDodajPomiarCialaClick(View view) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_frame, new com.example.fitcometv3.Dodaj_Pomiar_Fragment()).commit();
@@ -236,10 +187,4 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_frame, new com.example.fitcometv3.Pomiar_Fragment()).commit();
     }
-
-    public void Wyloguj(View view) {
-        Intent intent = new Intent(this, LoginActiv.class);
-        startActivity(intent);
-    }
-
 }

@@ -8,11 +8,12 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
     <!--Main zainicjalizowac-->
-    <ImageView
-        android:layout_width="600dp"
-        android:layout_height="600dp"
-        android:src="@drawable/logonew_color"
-        android:layout_marginBottom="300dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -94,13 +95,6 @@
             android:layout_column="1"
             android:progress="92" />
 
-        <TextView
-            android:id="@+id/textKalorie"
-            android:layout_width="205dp"
-            android:layout_height="66dp"
-            android:layout_row="4"
-            android:layout_column="1"
-            android:textSize="24sp" />
     </GridLayout>
 
     <include

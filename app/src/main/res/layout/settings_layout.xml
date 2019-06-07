@@ -20,6 +20,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="190dp"
         android:text="Ustawienia"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="30dp" />
 
@@ -42,11 +43,10 @@
         android:src="@drawable/united_kingdom" />
 
     <Button
+        android:id="@+id/buttonWyloguj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="Wyloguj"
+        android:layout_centerInParent="true"
         android:text="Wyloguj"
         android:textSize="20dp" />
 

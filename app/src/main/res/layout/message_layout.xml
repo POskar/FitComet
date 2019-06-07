@@ -30,7 +30,7 @@
             android:id="@+id/infosup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tutaj Możesz Zgłaszać Swoje Uwagi Co Do Naszej Aplikacji"
+            android:text="Tutaj możesz zgłosić uwagi/błędy naszej aplikacji do supportu."
             android:textSize="20dp" />
 
         <EditText
@@ -42,8 +42,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="150dp"
             android:background="@drawable/et_bg_black"
-            android:gravity="top"
-            android:hint="Wprowadz Swoja Uwage" />
+            android:gravity="top"/>
 
         <Button
             android:id="@+id/messageID"
@@ -53,7 +52,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="45dp"
             android:layout_marginBottom="57dp"
-            android:text="Wyslij Uwage" />
+            android:text="Wyślij" />
 
     </RelativeLayout>
 
