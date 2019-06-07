@@ -15,9 +15,9 @@ import org.w3c.dom.Text;
 
 public class Pomiar_Fragment extends Fragment {
     View myView;
-    TextView tvDodajPomiarwaga1, tvDodajPomiartalia1, tvDodajPomiarbiceps1, tvDodajPomiarSzyja1, tvDodajPomiarchest1,
-            tvdodajPomiarBrzuch1, tvDodajPomiarBiodra1, tvDodajPomiarUdo1, tvDodajPomiarlydka1,
-            tvDodajPomiarwaga2, tvDodajPomiartalia2, tvDodajPomiarbiceps2, tvDodajPomiarSzyja2, tvDodajPomiarchest2, tvdodajPomiarBrzuch2,
+    TextView tvDodajPomiarwaga1, tvDodajPomiartalia1, tvDodajPomiarbiceps1, tvDodajPomiarchest1,
+            tvDodajPomiarBiodra1, tvDodajPomiarUdo1, tvDodajPomiarlydka1,
+            tvDodajPomiarwaga2, tvDodajPomiartalia2, tvDodajPomiarbiceps2, tvDodajPomiarchest2,
             tvDodajPomiarBiodra2, tvDodajPomiarUdo2, tvDodajPomiarlydka2, tvTkankatluszczowa2, tvTkankatluszczowa1;
 
     @Nullable
@@ -28,16 +28,15 @@ public class Pomiar_Fragment extends Fragment {
 
         if (Zapis.anuluj == false) {
             Zapis.anuluj=false;
-          if  (Zapis.zapis == true) {
+            if  (Zapis.zapis == true) {
                 Bundle bundle = getArguments();
                 if (Zapis.zapispierwszy == false) {
 
                     String waga1 = bundle.getString("Waga");
                     String talia1 = bundle.getString("Talia1");
                     String biceps1 = bundle.getString("Biceps1");
-                    String szyja1 = bundle.getString("szyja1");
+
                     String chest1 = bundle.getString("chest1");
-                    String brzuch1 = bundle.getString("brzuch1");
                     String biodro1 = bundle.getString("biodro1");
                     String udo1 = bundle.getString("udo1");
                     String lydka1 = bundle.getString("lydka1");
@@ -63,9 +62,8 @@ public class Pomiar_Fragment extends Fragment {
                     tvDodajPomiarwaga1.setText(waga1);
                     tvDodajPomiartalia1.setText(talia1);
                     tvDodajPomiarbiceps1.setText(biceps1);
-                    tvDodajPomiarSzyja1.setText(szyja1);
+
                     tvDodajPomiarchest1.setText(chest1);
-                    tvdodajPomiarBrzuch1.setText(brzuch1);
                     tvDodajPomiarBiodra1.setText(biodro1);
                     tvDodajPomiarUdo1.setText(udo1);
                     tvDodajPomiarlydka1.setText(lydka1);
@@ -79,7 +77,7 @@ public class Pomiar_Fragment extends Fragment {
                     String biceps2 = bundle.getString("Biceps1");
                     String szyja2 = bundle.getString("szyja1");
                     String chest2 = bundle.getString("chest1");
-                    String brzuch2 = bundle.getString("brzuch1");
+
                     String biodro2 = bundle.getString("biodro1");
                     String udo2 = bundle.getString("udo1");
                     String lydka2 = bundle.getString("lydka1");
@@ -105,9 +103,9 @@ public class Pomiar_Fragment extends Fragment {
                     tvDodajPomiarwaga2.setText(waga2);
                     tvDodajPomiartalia2.setText(talia2);
                     tvDodajPomiarbiceps2.setText(biceps2);
-                    tvDodajPomiarSzyja2.setText(szyja2);
+
                     tvDodajPomiarchest2.setText(chest2);
-                    tvdodajPomiarBrzuch2.setText(brzuch2);
+
                     tvDodajPomiarBiodra2.setText(biodro2);
                     tvDodajPomiarUdo2.setText(udo2);
                     tvDodajPomiarlydka2.setText(lydka2);

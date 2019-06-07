@@ -55,30 +55,30 @@ public class Dodaj_Pomiar_Fragment extends Fragment implements View.OnClickListe
                 String udo1 = udo1e.getText().toString();
                 String lydka1 = lydka1e.getText().toString();
                 if(!waga1S.isEmpty()&&!talia1S.isEmpty()&&!Biceps1.isEmpty()&&!chest1.isEmpty()&&!biodro1.isEmpty()&&!udo1.isEmpty()&&!lydka1.isEmpty()) {
-                   if(Integer.valueOf(waga1S)<=30&&Integer.valueOf(waga1S)>=250&&Integer.valueOf(talia1S)>30&&Integer.valueOf(talia1S)<=150&&Integer.valueOf(Biceps1)>10&&Integer.valueOf(Biceps1)<=60&&Integer.valueOf(chest1)>50&&Integer.valueOf(chest1)<=200&&Integer.valueOf(biodro1)>50&&Integer.valueOf(biodro1)<=200&&Integer.valueOf(udo1)>30&&Integer.valueOf(udo1)<=120&&Integer.valueOf(lydka1)>20&&Integer.valueOf(lydka1)<=70){
-                    Bundle bundle = new Bundle();
-                    bundle.putString("Waga", waga1S);
-                    bundle.putString("Talia1", talia1S);
-                    bundle.putString("Biceps1", Biceps1);
-                    bundle.putString("chest1", chest1);
-                    bundle.putString("biodro1", biodro1);
-                    bundle.putString("udo1", udo1);
-                    bundle.putString("lydka1", lydka1);
+                    if(Integer.valueOf(waga1S)>=30&&Integer.valueOf(waga1S)<=250&&Integer.valueOf(talia1S)>30&&Integer.valueOf(talia1S)<=150&&Integer.valueOf(Biceps1)>10&&Integer.valueOf(Biceps1)<=60&&Integer.valueOf(chest1)>50&&Integer.valueOf(chest1)<=200&&Integer.valueOf(biodro1)>50&&Integer.valueOf(biodro1)<=200&&Integer.valueOf(udo1)>30&&Integer.valueOf(udo1)<=120&&Integer.valueOf(lydka1)>20&&Integer.valueOf(lydka1)<=70){
+                        Bundle bundle = new Bundle();
+                        bundle.putString("Waga", waga1S);
+                        bundle.putString("Talia1", talia1S);
+                        bundle.putString("Biceps1", Biceps1);
+                        bundle.putString("chest1", chest1);
+                        bundle.putString("biodro1", biodro1);
+                        bundle.putString("udo1", udo1);
+                        bundle.putString("lydka1", lydka1);
 
 
-                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-                    Pomiar_Fragment pomiar_fragment = new Pomiar_Fragment();
-                    pomiar_fragment.setArguments(bundle);
-
-
-                    Zapis.zapis = true;
+                        Pomiar_Fragment pomiar_fragment = new Pomiar_Fragment();
+                        pomiar_fragment.setArguments(bundle);
 
 
-                    fragmentTransaction.replace(R.id.content_frame, pomiar_fragment);
-                    fragmentTransaction.commit();
-                    break;}else{Toast.makeText(getContext(), "Podane Wartosci sa nie zgodne z prawidlowego przedzialu sprawdz poprawnosc danych", Toast.LENGTH_LONG).show();}
+                        Zapis.zapis = true;
+
+
+                        fragmentTransaction.replace(R.id.content_frame, pomiar_fragment);
+                        fragmentTransaction.commit();
+                        break;}else{Toast.makeText(getContext(), "Podane Wartosci sa nie zgodne z prawidlowego przedzialu sprawdz poprawnosc danych", Toast.LENGTH_LONG).show();}
 
                 }else {
                     Toast.makeText(getContext(), "Uzupelnij Wszystkie Pola", Toast.LENGTH_LONG).show();}
