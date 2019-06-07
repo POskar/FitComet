@@ -3,25 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/tlo">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="55dp"
-        android:background="@color/greey" />
+        android:background="@color/tlociemniejsze" />
 
     <View
         android:layout_width="120dp"
         android:layout_height="330dp"
         android:layout_marginTop="100dp"
-        android:background="@color/greey" />
+        android:background="@color/tlociemniejsze" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginTop="440dp"
-        android:background="@color/greey" />
+        android:background="@color/tlociemniejsze" />
 
 
     <Button
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="0dp"
         android:onClick="Sub"
         android:text="Zatwierdz" />
 
@@ -39,32 +39,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:onClick="onDodajPomiarCialaAnulujClick"
         android:text="Anuluj" />
 
 
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp" />
-
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/ButtonDodajPomiar"
         android:layout_centerInParent="true"
-        android:layout_marginTop="4dp"
         android:layout_marginRight="46dp"
         android:text="Pomiar Ciała"
         android:textColor="@color/white"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="10dp" />
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -95,7 +87,7 @@
 
                 android:layout_row="2"
                 android:layout_column="0"
-                android:text="Waga"
+                android:background="@drawable/wagatekst"
                 android:textSize="25sp" />
 
             <EditText
@@ -111,42 +103,24 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp" />
 
-            <TextView
-
-                android:layout_row="3"
-                android:layout_column="0"
-                android:text="Szyja"
-                android:textSize="25sp" />
-
-            <EditText
-                android:id="@+id/szyjaET"
-                android:layout_row="3"
-                android:layout_column="1"
-                android:layout_marginLeft="30dp"
-                android:background="@drawable/et_bg_black"
-                android:hint="Wpisz Tutaj Obwod Szyji"
-                android:inputType="number"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp" />
-
 
             <TextView
 
                 android:layout_row="4"
                 android:layout_column="0"
-                android:text="Kl.Piersiowa"
+                android:background="@drawable/klpiersiowatekst"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/chestET"
+                android:layout_height="wrap_content"
                 android:layout_row="4"
                 android:layout_column="1"
                 android:layout_marginLeft="30dp"
                 android:background="@drawable/et_bg_black"
                 android:hint="Obwód Kl.Piersiowej"
                 android:inputType="number"
+                android:layout_marginTop="10dp"
                 android:paddingLeft="5dp"
                 android:paddingTop="5dp"
                 android:paddingRight="5dp"
@@ -157,7 +131,7 @@
 
                 android:layout_row="5"
                 android:layout_column="0"
-                android:text="Biceps"
+                android:background="@drawable/bicepstekst"
                 android:textSize="25sp" />
 
             <EditText
@@ -178,7 +152,7 @@
 
                 android:layout_row="6"
                 android:layout_column="0"
-                android:text="Talia"
+                android:background="@drawable/taliatekst"
                 android:textSize="25sp" />
 
             <EditText
@@ -197,30 +171,9 @@
 
             <TextView
 
-                android:layout_row="7"
-                android:layout_column="0"
-                android:text="Brzuch"
-                android:textSize="25sp" />
-
-            <EditText
-                android:id="@+id/brzuchET"
-                android:layout_row="7"
-                android:layout_column="1"
-                android:layout_marginLeft="30dp"
-                android:background="@drawable/et_bg_black"
-                android:hint="Obwód Brzucha"
-                android:inputType="number"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp" />
-
-
-            <TextView
-
                 android:layout_row="8"
                 android:layout_column="0"
-                android:text="Biodra"
+                android:background="@drawable/pastekst"
                 android:textSize="25sp" />
 
             <EditText
@@ -229,7 +182,7 @@
                 android:layout_column="1"
                 android:layout_marginLeft="30dp"
                 android:background="@drawable/et_bg_black"
-                android:hint="Obwód Biodra"
+                android:hint="Obwód Pasa"
                 android:inputType="number"
                 android:paddingLeft="5dp"
                 android:paddingTop="5dp"
@@ -241,7 +194,7 @@
 
                 android:layout_row="9"
                 android:layout_column="0"
-                android:text="Udo"
+                android:background="@drawable/udotekst"
                 android:textSize="25sp" />
 
             <EditText
@@ -262,7 +215,7 @@
 
                 android:layout_row="10"
                 android:layout_column="0"
-                android:text="Łydka"
+                android:background="@drawable/lydkitekst"
                 android:textSize="25sp" />
 
             <EditText

@@ -19,6 +19,7 @@
     <color name="test4">#1A1336</color>
     <color name="test5">#121E34</color>
     <color name="tlo">#D6D6D6</color>
+    <color name="tlociemniejsze">#BEBCBC</color>
     <color name="szary">#91A6B7</color>
     <color name="pomarancz">#FF9D00</color>
 </resources>

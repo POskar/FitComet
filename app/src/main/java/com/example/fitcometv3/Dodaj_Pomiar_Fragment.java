@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class Dodaj_Pomiar_Fragment extends Fragment implements View.OnClickListener {
     View myView;
-    EditText waga1, talia1, biceps1, szyja1e, chest1e, brzuch1e, biodro1e, udo1e, lydka1e;
+    EditText waga1, talia1, biceps1, chest1e, biodro1e, udo1e, lydka1e;
     Button Sub;
     //
     // FragmentManager fragmentManager = getFragmentManager();
@@ -32,9 +32,7 @@ public class Dodaj_Pomiar_Fragment extends Fragment implements View.OnClickListe
         waga1 = (EditText) myView.findViewById(R.id.wagaET);
         talia1 = (EditText) myView.findViewById(R.id.taliET);
         biceps1 = (EditText) myView.findViewById(R.id.bicepsET);
-        szyja1e = (EditText) myView.findViewById(R.id.szyjaET);
         chest1e = (EditText) myView.findViewById(R.id.chestET);
-        brzuch1e = (EditText) myView.findViewById(R.id.brzuchET);
         biodro1e = (EditText) myView.findViewById(R.id.biodraET);
         udo1e = (EditText) myView.findViewById(R.id.udaET);
         lydka1e = (EditText) myView.findViewById(R.id.lydkET);
@@ -52,21 +50,17 @@ public class Dodaj_Pomiar_Fragment extends Fragment implements View.OnClickListe
                 String waga1S = waga1.getText().toString();
                 String talia1S = talia1.getText().toString();
                 String Biceps1 = biceps1.getText().toString();
-                String szyja1 = szyja1e.getText().toString();
                 String chest1 = chest1e.getText().toString();
-                String brzuch1 = brzuch1e.getText().toString();
                 String biodro1 = biodro1e.getText().toString();
                 String udo1 = udo1e.getText().toString();
                 String lydka1 = lydka1e.getText().toString();
-                if(!waga1S.isEmpty()&&!talia1S.isEmpty()&&!Biceps1.isEmpty()&&!szyja1.isEmpty()&&!chest1.isEmpty()&&!brzuch1.isEmpty()&&!biodro1.isEmpty()&&!udo1.isEmpty()&&!lydka1.isEmpty()) {
-                   if(Integer.valueOf(waga1S)<=30&&Integer.valueOf(waga1S)>=250&&Integer.valueOf(talia1S)<30&&Integer.valueOf(talia1S)<=150&&Integer.valueOf(Biceps1)<10&&Integer.valueOf(Biceps1)<=60&&Integer.valueOf(szyja1)<20&&Integer.valueOf(szyja1)<=90&&Integer.valueOf(chest1)<50&&Integer.valueOf(chest1)<=200&&Integer.valueOf(brzuch1)<50&&Integer.valueOf(brzuch1)<=200&&Integer.valueOf(biodro1)<50&&Integer.valueOf(biodro1)<=200&&Integer.valueOf(udo1)<30&&Integer.valueOf(udo1)<=120&&Integer.valueOf(lydka1)<20&&Integer.valueOf(lydka1)<=70){
+                if(!waga1S.isEmpty()&&!talia1S.isEmpty()&&!Biceps1.isEmpty()&&!chest1.isEmpty()&&!biodro1.isEmpty()&&!udo1.isEmpty()&&!lydka1.isEmpty()) {
+                   if(Integer.valueOf(waga1S)<=30&&Integer.valueOf(waga1S)>=250&&Integer.valueOf(talia1S)>30&&Integer.valueOf(talia1S)<=150&&Integer.valueOf(Biceps1)>10&&Integer.valueOf(Biceps1)<=60&&Integer.valueOf(chest1)>50&&Integer.valueOf(chest1)<=200&&Integer.valueOf(biodro1)>50&&Integer.valueOf(biodro1)<=200&&Integer.valueOf(udo1)>30&&Integer.valueOf(udo1)<=120&&Integer.valueOf(lydka1)>20&&Integer.valueOf(lydka1)<=70){
                     Bundle bundle = new Bundle();
                     bundle.putString("Waga", waga1S);
                     bundle.putString("Talia1", talia1S);
                     bundle.putString("Biceps1", Biceps1);
-                    bundle.putString("szyja1", szyja1);
                     bundle.putString("chest1", chest1);
-                    bundle.putString("brzuch1", brzuch1);
                     bundle.putString("biodro1", biodro1);
                     bundle.putString("udo1", udo1);
                     bundle.putString("lydka1", lydka1);

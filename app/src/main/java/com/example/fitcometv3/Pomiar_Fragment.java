@@ -49,16 +49,16 @@ public class Pomiar_Fragment extends Fragment {
                     double e = (Integer.valueOf(waga1)) * 2.2;
                     double WynikProcent = d / e * 100;
 
+
                     tvDodajPomiarwaga1 = (TextView) myView.findViewById(R.id.waga1TV);
                     tvDodajPomiartalia1 = (TextView) myView.findViewById(R.id.talia1TV);
                     tvDodajPomiarbiceps1 = (TextView) myView.findViewById(R.id.biceps1TV);
-                    tvDodajPomiarSzyja1 = (TextView) myView.findViewById(R.id.szyja1TV);
                     tvDodajPomiarchest1 = (TextView) myView.findViewById(R.id.chest1TV);
-                    tvdodajPomiarBrzuch1 = (TextView) myView.findViewById(R.id.brzuch1TV);
                     tvDodajPomiarBiodra1 = (TextView) myView.findViewById(R.id.biodraTV);
                     tvDodajPomiarUdo1 = (TextView) myView.findViewById(R.id.udo1TV);
                     tvDodajPomiarlydka1 = (TextView) myView.findViewById(R.id.lydka1TV);
                     tvTkankatluszczowa1 = (TextView) myView.findViewById(R.id.tkanka1);
+
 
                     tvDodajPomiarwaga1.setText(waga1);
                     tvDodajPomiartalia1.setText(talia1);
@@ -91,16 +91,16 @@ public class Pomiar_Fragment extends Fragment {
                     double e = (Integer.valueOf(waga2)) * 2.2;
                     double WynikProcent = d / e * 100;
 
+
                     tvDodajPomiarwaga2 = (TextView) myView.findViewById(R.id.waga2TV);
                     tvDodajPomiartalia2 = (TextView) myView.findViewById(R.id.talia2TV);
                     tvDodajPomiarbiceps2 = (TextView) myView.findViewById(R.id.biceps2TV);
-                    tvDodajPomiarSzyja2 = (TextView) myView.findViewById(R.id.szyja2TV);
                     tvDodajPomiarchest2 = (TextView) myView.findViewById(R.id.chest2TV);
-                    tvdodajPomiarBrzuch2 = (TextView) myView.findViewById(R.id.brzuch2TV);
                     tvDodajPomiarBiodra2 = (TextView) myView.findViewById(R.id.biodra2TV);
                     tvDodajPomiarUdo2 = (TextView) myView.findViewById(R.id.udo2TV);
                     tvDodajPomiarlydka2 = (TextView) myView.findViewById(R.id.lydka2TV);
                     tvTkankatluszczowa2 = (TextView) myView.findViewById(R.id.tkanka2);
+
 
                     tvDodajPomiarwaga2.setText(waga2);
                     tvDodajPomiartalia2.setText(talia2);
