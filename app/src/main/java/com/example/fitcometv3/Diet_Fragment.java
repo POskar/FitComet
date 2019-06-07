@@ -26,7 +26,7 @@ public class Diet_Fragment extends Fragment {
     TextView tvKalorie, tvSniadanie, tvObiad, tvKolacja;
 
     int userWiek, userWaga, userWzrost;
-    double userKalorie, userPoziomAktywnosci;
+    double userKalorie, userKalorieHolder, userPoziomAktywnosci;
 
     FirebaseAuth mAuth;
     DatabaseReference mDatabaseRef, mPosilkiRef;
@@ -82,11 +82,13 @@ public class Diet_Fragment extends Fragment {
             }
         });
 
-        Random r = new Random();
-
         mPosilkiRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //userKalorie jest widoczne, dieta jako zestawy co 100 kalorii, <2000, 3000>, łapiące przedział 50
+                //ewentualnie zamiana z posilkiem z innego zestawu, ale tego samego poziomu kalorii
+                Random r = new Random();
+                int i1 = r.nextInt(10 - 1 + 1) + 1;
 
             }
 

@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity
                 finishActivity(0);
             } else {
                 Zapis.editDodaj = false;
-                super.onBackPressed();//po usunieciu nic sie nie dzieje
+                super.onBackPressed();
 
             }
         }
