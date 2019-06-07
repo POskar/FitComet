@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     public boolean kgTrue = true;
     FirebaseAuth mAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        TextView tvZapotrzebowanie = findViewById(R.id.zapotrzebowanietxt);
+
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -119,6 +124,9 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_calculator) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new com.example.fitcometv3.Calculator_Fragment()).addToBackStack(null).commit();
+        } else if (id == R.id.nav_glowna) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         }
         // Intent intent = new Intent(this, LoginActiv.class);
         // startActivity(intent);

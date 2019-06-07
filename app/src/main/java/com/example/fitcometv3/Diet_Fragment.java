@@ -28,8 +28,17 @@ public class Diet_Fragment extends Fragment {
     int userWiek, userWaga, userWzrost;
     double userKalorie, userPoziomAktywnosci;
 
+    public double getUserKalorie() {
+        return userKalorie;
+    }
+
+    public void setUserKalorie(double userKalorie) {
+        this.userKalorie = userKalorie;
+    }
+
     FirebaseAuth mAuth;
     DatabaseReference mDatabaseRef, mPosilkiRef;
+
 
     @Nullable
     @Override
@@ -75,6 +84,7 @@ public class Diet_Fragment extends Fragment {
                     mDatabaseRef.child("TargetKalorie").setValue(userKalorie);
                 }
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
