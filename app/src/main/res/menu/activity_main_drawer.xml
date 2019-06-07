@@ -10,6 +10,11 @@
             android:icon="@drawable/ic_profil"
             android:title="@string/profile" />
         <item
+
+            android:id="@+id/nav_glowna"
+            android:icon="@drawable/ic_profil"
+            android:title="Strona Główna" />
+        <item
             android:id="@+id/nav_pomiar"
             android:icon="@drawable/miarka_"
             android:title="@string/measure" />

@@ -130,6 +130,9 @@ public class StopwatchActivity extends AppCompatActivity implements NavigationVi
 
         } else if (id == R.id.nav_calculator) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new com.example.fitcometv3.Calculator_Fragment()).commit();
+        } else if (id == R.id.nav_glowna) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
